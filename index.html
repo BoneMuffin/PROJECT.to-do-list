@@ -13,21 +13,56 @@
     <main id="content">
     <nav id="navbar" class="project-panel">
         <h3 class="panel-title">Projects</h3>
+        <div class="projects-list">
+            <button class="button-project">
+                <div class="l-project-panel">
+                    <span>Make dinner</span>
+                </div>
+                <div class="r-project-panel">
+                    <svg>X
+                    </svg>
+                </div>
+            </button>
+
+            <button class="button-project">
+                <div class="l-project-panel">
+                    <span>Find a coffee shop</span>
+                </div>
+                <div class="r-project-panel">
+                    <svg>X
+                    </svg>
+                </div>
+            </button>
+        </div>
+        <button id="add-project-btn">
+            Add project
+        </button>
     </nav>
-        <div class="project"> 
-            <h1 class="category">Home</h1>
-            <div class="listDiv">
-                <div class="task">
-                    <h3 class="task-title">Meal prep dinner</h3>
-                    <p class="task-dueDate">Tomorrow night</p>
-                </div>
-                <div class="task">
-                    <h3 class="task-title">Walk the dog</h3>
-                    <p class="task-dueDate">In an hour</p>
-                </div>
+        <div class="project-preview"> 
+            <h1 class="project-name">Make dinner</h1>
+            <div class="task-list-div">
+                <button class="task-button">
+                    <div class="l-task-panel">
+                        <p class="task-content">Buy cake</p>
+                    </div>
+                    <div class="r-task-panel">
+                        <p class="due-date">Today</p>
+                        <svg>X</svg>
+                    </div>
+                </button>
             </div>
+            <button class="add-task-btn">
+                <svg>+</svg>
+                Add task
+            </button>
         </div>
 
     </main>
+<footer>
+    <p>
+        Built by 
+        <a href="https://github.com/BoneMuffin/" target="_blank">BoneMuffin</a>
+    </p>
+</footer>
 </body>
 </html>
