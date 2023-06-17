@@ -1,0 +1,18 @@
+:root { 
+    --dark-grey: #37373c;
+    --grey-dot: #4f4f4f;
+    --paper: #f7f7f7;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap');
+  
+body { 
+
+    font-family: 'Walter Turncoat';
+    font-size: 2.5em;
+    padding:1em;
+
+    background-image: radial-gradient(var(--grey-dot) 1px, var(--paper) 10%);
+    background-size: 1em 1em;
+    background-position:.1em;
+  }
