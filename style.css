@@ -1,0 +1,115 @@
+:root { 
+    --dark-grey: #37373c;
+    --grey-dot: #4f4f4f;
+    --paper: #f7f7f7;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+body { 
+    font-family: 'Walter Turncoat';
+    font-size: 1.5em;
+    padding:1em;
+
+    background-image: radial-gradient(var(--grey-dot) 1px, var(--paper) 10%);
+    background-size: 1em 1em;
+    background-position:.1em;
+
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+main {
+    display: flex;
+    min-height: calc(100vh - 104px - 48px);
+}
+
+nav {
+    width: 300px;
+    min-width: 250px;
+    padding: 20px;
+}
+
+button {
+  display: block;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1rem;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-grey);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.main {
+  display: flex;
+}
+
+.nav {
+  padding: 1rem;
+  flex: 1;
+  height: 100%;
+}
+
+.nav {
+  width: 100%;
+}
+
+.button-nav {
+  width: 100%;
+  text-align: left;
+}
+
+.default-project {
+  padding: 1rem;
+}
+
+.user-projects h1 {
+  padding: 1rem;
+}
+
+.project-preview {
+  flex: 3;
+  margin-top: 2rem;
+  margin-left: 5rem;
+}
+
+.project-preview h1 {
+  padding: 0 1rem;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+/* TO DO */
+/* - ADD MARKER-LIKE COLORS FOR THE TASKS'S PRIORITY LEVEL.
+        FOR EXAMPLE, RED BACKGROUND FOR THE PARAGRAPH IF URGENT, GREEN IF NOT 
+        OR A LITTLE TAG "IMPORTANT" RIGHT NEXT TO THE TASK NAME
+*/
