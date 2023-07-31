@@ -3,48 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Notes</title>
+  <title>Note-Taking App</title>
   <link rel="stylesheet" href="test1.css">
 </head>
 <body>
-  <h1>Todo List</h1>
+  <header>
+    <h1 class="title">Todo List</h1>
+  </header>
 
-<div class="notes">
+<main>
   <div class="note">
-    <div class="todo o"></div>
-    <div contenteditable class="text">a brand new task</div>
-  </div>
+    <todo class="started">o</todo>
+    <text contenteditable="">here is a task that i started</text>
+    
+    <note><todo class="halfway">o</todo>
+      <text contenteditable="">a sub-task</text>
+  </note>
+  
+  <note>
+    <todo class="started">o</todo>
+    <text contenteditable="">another sub-task</text>
+  </note>
 
-  <div class="note">
-    <div class="todo started o"></div>
-    <div contenteditable class="text">here is a task that i started</div>
-    <div class="note">
-      <div class="todo halfway o"></div>
-      <div contenteditable class="text">a sub-task</div>
-    </div>
-    <div class="note">
-      <div class="todo started o"></div>
-      <div contenteditable class="text">another sub-task</div>
-    </div>
-  </div>
+  </note>
+  
+  <note>
+    <todo class="halfway">o</todo>
+    <text contenteditable="">halfway done or pending</text>
+  </note>
+  
+  <note>
+    <todo class="done">o</todo>
+    <text contenteditable="">this task is done</text>
+  </note>
+  
+  <note>
+    <todo class="canceled">o</todo>
+    <text contenteditable="">cancel a task by finishing the cross</text>
+  </note>
+</main>
 
-  <div class="note">
-    <div class="todo halfway o"></div>
-    <div contenteditable class="text">halfway done or pending</div>
-  </div>
-
-  <div class="note">
-    <div class="todo done o"></div>
-    <div contenteditable class="text">this task is done</div>
-  </div>
-
-  <div class="note">
-    <div class="todo canceled o"></div>
-    <div contenteditable class="text">cancel a task by finishing the cross</div>
-  </div>
-
-</div>
-
-  <script src="test1.js"></script>
+<script src="test1.js"></script>
 </body>
 </html>
