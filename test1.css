@@ -1,70 +1,139 @@
 @import url('https://fonts.googleapis.com/css?family=Walter+Turncoat');
 
-:root {
-    --pen:  #37373c;
+*,
+*::after,
+*::before {
+    font-family: 'Walter Turncoat', cursive;
+
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-/* Global styles */
-body {
-    font-family: 'Walter Turncoat', cursive;
-    font-size: 2.5em;
-    padding: 1em;
-    background-size: 1em 1em;
-    background-image: radial-gradient(circle, rgba(0, 50, 255, 0.2) 1px, rgba(0, 0, 0, 0) 2px);
-    background-position: 0.3em 0.62em;
+:root { 
+    --dark-grey: #37373c;
+    --grey-dot: #818181;
+    --paper: #f7f7f7;
+    --pen: #37373c;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
   }
-  
-  /* Todo styles */
-  div.todo {
-    display: inline-block;
-    position: relative;
-    transform: scale(1.3);
-    cursor: pointer;
-    user-select: none;
-  }
-  
-  div.todo.o:before,
-  div.todo.started:before,
-  div.todo.halfway:before,
-  div.todo.done:before,
-  div.todo.canceled:before {
-    content: '|';
-    position: absolute;
-    transform: rotate(45deg);
-    top: 8%;
-    left: 30%;
-  }
-  
-  div.todo.canceled:after {
-    content: '|';
-    position: absolute;
-    transform: rotate(-45deg);
-    top: 9%;
-    left: 30%;
-  }
-  
-  div.todo.halfway:after {
-    content: '';
-    position: absolute;
-    width: 0.5em;
-    height: 1em;
-    background: rgba($pen, 0.95);
-    display: block;
-    border-radius: 0 1em 1em 0;
-    top: 18%;
-    left: 20%;
-    transform: scale(0.5) rotate(45deg);
-  }
-  
-  div.todo.done:after {
-    content: '';
-    position: absolute;
-    width: 1em;
-    height: 1em;
-    background: rgba($pen, 0.95);
-    display: block;
-    border-radius: 50%;
-    top: 8%;
-    left: -40%;
-    transform: scale(0.45);
-  }
+
+body { 
+  min-height: calc(100vh - 104px - 48px);
+  font-size: 2em;
+  padding:1em;
+
+  background-size: 1em 1em;
+  background-image: radial-gradient(var(--grey-dot) 1px, var(--paper) 10%);
+  background-position: 0.62em 0.62em;
+
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+h1 {
+  display: block;
+  line-height: 1.001em;
+  color: var(--pen);
+  margin-bottom: 1em;
+}
+
+.note {
+  display: block;
+  line-height: 1.001em;
+  color: var(--pen);
+  margin-left: 1em;
+}
+
+.note .text {
+  margin-left: 1.25em;
+  display: flex;
+  margin-top: -1em;
+  outline: none;
+}
+
+.note .todo {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid var(--pen);
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.note .todo:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--pen);
+  display: none;
+}
+
+.note .todo.started:before {
+  transform: rotate(45deg) translate(-50%, -50%);
+  display: block;
+}
+
+.note .todo.canceled:before {
+  transform: rotate(45deg) translate(-50%, -50%);
+  display: block;
+}
+
+.note .todo.canceled:after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 12px;
+  background: var(--pen);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.note .todo.halfway:before {
+  transform: rotate(45deg) translate(-50%, -50%);
+  display: block;
+}
+
+.note .todo.halfway:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background: var(--pen);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg) scale(0.5);
+}
+
+.note .todo.done:before {
+  transform: rotate(45deg) translate(-50%, -50%);
+  display: block;
+}
+
+.note .todo.done:after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--pen);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.45);
+}
