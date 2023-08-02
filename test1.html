@@ -48,36 +48,35 @@
 
   <div class="line"></div>
   <div id="note-list">
-      <div class="note">
-        <todo class="started">o</todo>
-        <text contenteditable="">here is a task that i started</text>
+        <div class="note">
+          <todo class="started">o</todo>
+          <span class="task-content">here is a task that i started</span>
+          
+                <div class="note">
+                    <todo id="task-status" class="halfway">o</todo>
+                    <span class="task-content">a sub-task</span>
+                </div>
+                
+                <div class="note">
+                  <todo id="task-status" lass="started">o</todo>
+                  <span class="task-content">another sub-task</span>
+                </div>
+        </div>
         
-              <div class="note">
-                  <todo class="halfway">o</todo>
-                  <text contenteditable="">a sub-task</text>
-              </div>
-              
-              <div class="note">
-                <todo class="started">o</todo>
-                <text contenteditable="">another sub-task</text>
-              </div>
+        <div class="note">
+          <todo id="task-status" class="halfway">o</todo>
+          <span class="task-content">halfway done or pending</span>
+        </div>
+        
+        <div class="note">
+          <todo id="task-status" class="done">o</todo>
+          <span class="task-content">this task is done</span>
+        </div>
+        
+        <div class="note">
+          <todo id="task-status" class="canceled">o</todo>
+          <span class="task-content">cancel a task by finishing the cross</span>
       </div>
-      
-      <div class="note">
-        <todo class="halfway">o</todo>
-        <text contenteditable="">halfway done or pending</text>
-      </div>
-      
-      <div class="note">
-        <todo class="done">o</todo>
-        <text contenteditable="">this task is done</text>
-      </div>
-      
-      <div class="note">
-        <todo class="canceled">o</todo>
-        <text contenteditable="">cancel a task by finishing the cross</text>
-      </div>
-      
   </div>
 </div>
 </main>
