@@ -91,7 +91,6 @@ main {
 
 .project-panel {
   width: 75vw;
-  overflow-y: scroll;
   padding: 50px 40px;
   box-sizing: border-box;
   margin: 0 auto;
@@ -102,7 +101,7 @@ main {
   line-height: 1em;
   color: #37373c;
   margin-left: 1em;
-  
+
   margin-top: 12px;
   margin-bottom: 12px;
   padding: 2.5px;
@@ -245,7 +244,24 @@ main {
   max-width: 100px;
 }
 
+.task-settings-right {
+  display: flex;
+}
 
+.task-content {
+  margin-left: 12px;
+}
+
+.task-delete {
+  width: 40px;
+  margin-top: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.task-delete:hover {
+  transform: scale(1.2);
+}
 /* MEDIA QUERIES */
 
 @media (max-width: 650px) {
