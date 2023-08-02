@@ -16,41 +16,70 @@
     </button>
   </header>
 
-<main>
+<main class="main">
   <nav class="nav">
+      <h3 class="project-header">Projects:</h3>
+      <div class="line"></div>
+
+
+      <!-- EDIT THIS -->
+      <div class="projects-div-nav">
+        <div class="projects active">
+          <p>Buy catnip</p>
+        </div>
+      </div>
+
+      <div class="add-project-div">
+        <div id="add-project">
+          <p class="ap-text">
+            <span id="plus">+</span>
+            Add a project
+          </p>
+        </div>
+      </div>
+    <!-- EDIT THIS -->
 
   </nav>
   
-  <div class="note">
-    <todo class="started">o</todo>
-    <text contenteditable="">here is a task that i started</text>
-    
-          <div class="note">
-              <todo class="halfway">o</todo>
-              <text contenteditable="">a sub-task</text>
-          </div>
-          
-          <div class="note">
-            <todo class="started">o</todo>
-            <text contenteditable="">another sub-task</text>
-          </div>
-  </div>
-  
-  <div class="note">
-    <todo class="halfway">o</todo>
-    <text contenteditable="">halfway done or pending</text>
-  </div>
-  
-  <div class="note">
-    <todo class="done">o</todo>
-    <text contenteditable="">this task is done</text>
-  </div>
-  
-  <div class="note">
-    <todo class="canceled">o</todo>
-    <text contenteditable="">cancel a task by finishing the cross</text>
+<div class="project-panel" id="project-panel">
+  <div class="project-info">
+    <h2 id="project-name">Example project</h2>
   </div>
 
+  <div class="line"></div>
+  <div id="note-list">
+      <div class="note">
+        <todo class="started">o</todo>
+        <text contenteditable="">here is a task that i started</text>
+        
+              <div class="note">
+                  <todo class="halfway">o</todo>
+                  <text contenteditable="">a sub-task</text>
+              </div>
+              
+              <div class="note">
+                <todo class="started">o</todo>
+                <text contenteditable="">another sub-task</text>
+              </div>
+      </div>
+      
+      <div class="note">
+        <todo class="halfway">o</todo>
+        <text contenteditable="">halfway done or pending</text>
+      </div>
+      
+      <div class="note">
+        <todo class="done">o</todo>
+        <text contenteditable="">this task is done</text>
+      </div>
+      
+      <div class="note">
+        <todo class="canceled">o</todo>
+        <text contenteditable="">cancel a task by finishing the cross</text>
+      </div>
+      
+  </div>
+</div>
 </main>
 
 <script src="test1.js"></script>
