@@ -19,7 +19,7 @@ html {
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 body {
@@ -97,7 +97,10 @@ main {
 }
 
 .note {
-  display: block;
+  display: flex;
+  align-items: center;
+justify-content: space-between;
+
   line-height: 1em;
   color: #37373c;
   margin-left: 1em;
@@ -107,7 +110,7 @@ main {
   padding: 2.5px;
 }
 
-.note .note-content {
+.note .task-content {
   margin-left: 1.25em;
   display: flex;
   margin-top: -1em;
@@ -262,6 +265,9 @@ main {
 .task-delete:hover {
   transform: scale(1.2);
 }
+
+
+
 /* MEDIA QUERIES */
 
 @media (max-width: 650px) {
