@@ -91,7 +91,7 @@ main {
 
 .project-panel {
   width: 75vw;
-  padding: 50px 40px;
+  padding: 0px 40px; /* 50px 40px*/
   box-sizing: border-box;
   margin: 0 auto;
 }
@@ -113,7 +113,6 @@ main {
 .note .task-content {
   margin-left: 1.25em;
   display: flex;
-  margin-top: -1em;
   outline: none;
 }
 
@@ -245,7 +244,6 @@ main {
 .project-info {
   display: flex;
   justify-content: space-between;
-  max-width: 100px;
 }
 
 .task-settings-right, 
