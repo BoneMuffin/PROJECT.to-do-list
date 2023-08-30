@@ -7,7 +7,7 @@
   --light-grey: #e6e6e6;
   --grey-dot: #4f4f4f;
   --paper: #f7f7f7;
-  --blue-marker: #a7f5ff;
+  --blue-marker: #beedf3;
   --red-marker: #ff7d7d;
   --green-marker: #afff97;
 }
@@ -119,7 +119,6 @@ main {
 }
 
 #note-list {
-  margin-right: 100px;
 }
 
 .note {
@@ -308,14 +307,12 @@ footer {
   bottom: 0;
   left: 0;
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 10px;
   width: 100%;
   padding: 10px;
   background-color: var(--dark-grey);
   color: var(--paper);
-  font-size: 25px;
+  font-size: 30px;
 }
 
 footer a {
