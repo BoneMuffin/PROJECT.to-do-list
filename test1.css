@@ -294,6 +294,11 @@ main {
   display: flex;
 }
 
+.deadline:hover {
+  scale: 1.05;
+  cursor: pointer;
+}
+
 .task-content {
   margin-left: 12px;
 }
