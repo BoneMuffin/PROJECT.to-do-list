@@ -7,9 +7,13 @@
   --light-grey: #e6e6e6;
   --grey-dot: #4f4f4f;
   --paper: #f7f7f7;
-  --blue-marker: #beedf3;
-  --red-marker: #ff7d7d;
-  --green-marker: #afff97;
+
+  /* priority color system palette */
+  --blue-marker: #beedf3; /* nonessential */
+  --red-marker: #ff7d7d;  /* urgent */
+  --green-marker: #afff97;  /* essential */
+/* the due date will be marked with each color depending on how close the due date it is*/
+
 }
 
 *, ::after, 
@@ -109,6 +113,10 @@ main {
   justify-content: space-between;
   margin-top: 10px;
   cursor: pointer;
+}
+
+.project:hover {
+  scale: 1.05;
 }
 
 .project-panel {
