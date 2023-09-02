@@ -1,1 +1,1 @@
-console.log("I am working as intended.");
+console.log("Webpack is working as intended.");
