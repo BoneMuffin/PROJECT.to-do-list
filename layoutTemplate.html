@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note-Taking App</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="content">
+  <!-- header for mobile only -->
+  <header>
+      <h1 class="title">Todo List</h1>
+    <button class="btn-nav" id="btn-nav">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu-open</title><path d="M21,15.61L19.59,17L14.58,12L19.59,7L21,8.39L17.44,12L21,15.61M3,6H16V8H3V6M3,13V11H13V13H3M3,18V16H16V18H3Z" /></svg>
+    </button>
+  </header>
+  <!-- header for mobile only -->
+
+<main class="main">
+  <nav class="active-projects-div">
+      <h3 class="project-header">projects</h3>
+      <div class="line"></div>
+
+      <div class="projects-container-nav">
+        <div class="project active">example project</div>
+        <div class="project">
+          <span>Buy catnip</span>
+           <span><svg class="task-delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>close</title><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg></span> 
+        </div>
+      </div>
+
+      <div class="add-project-container">
+        <div id="add-project">
+          <p class="addp-text">
+            <span id="plus">+</span>
+            add project
+          </p>
+        </div>
+      </div>
+  </nav>
+  
+<div class="project-panel" id="project-panel">
+  <div class="project-info">
+    <h2 id="project-title" contenteditable="">example project</h2>
+  </div>
+
+  <div class="line"></div>
+  <div id="note-list">
+
+        <div class="note">
+              <div class="task-settings-left">
+              <todo id="task-status" class="started">o</todo>
+              <span class="task-content" contenteditable="">a task that has been already started</span>
+            </div>
+    
+              <div class="task-settings-right">
+                <p class="deadline">no due date</p>
+                <svg class="task-delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>close</title><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+             </div>
+
+<!--
+        <div class="note">
+                <div task="task-settings-left">
+                    <todo id="task-status" class="halfway">o</todo>
+                    <span class="task-content" contenteditable="">a sub-task</span>
+                 </div>
+    
+                  <div class="task-settings-right">
+                      <p class="deadline">No due date</p>
+                      <svg class="task-delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>close</title><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+                  </div>
+        </div>
+                
+        <div class="note">
+                  <div class="task-settings-left">
+                    <todo id="task-status" class="halfway">o</todo>
+                    <span class="task-content" contenteditable="">another sub-task</span>
+                  </div>
+
+                  <div class="task-settings-right">
+                      <p class="deadline">No due date</p>
+                      <svg class="task-delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>close</title><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+                  </div>
+        </div>
+      -->
+      </div>
+        
+        <div class="note">
+          <div class="task-settings-left">
+
+          <todo id="task-status" class="halfway">o</todo>
+          <span class="task-content" contenteditable="">halfway done or pending</span>
+          </div>
+
+              <div class="task-settings-right">
+                <p class="deadline">no due date</p>
+                <svg class="task-delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>close</title><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+            </div>
+        </div>
+        
+        <div class="note">
+
+          <div class="task-settings-left">
+
+          <todo id="task-status" class="done">o</todo>
+          <span class="task-content" contenteditable="">this task is done</span>
+          </div>
+
+              <div class="task-settings-right">
+                <p class="deadline">no due date</p>
+                <svg class="task-delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>close</title><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+            </div>
+        </div>
+        
+        <div class="note">
+          <div class="task-settings-left">
+
+          <todo id="task-status" class="canceled">o</todo>
+          <span class="task-content" contenteditable="">cancel a task by finishing the cross</span>
+          </div>
+
+          <div class="task-settings-right">
+            <p class="deadline">no due date</p>
+            <svg class="task-delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>close</title><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+        </div>
+
+      </div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>
+    ☙ made by <a href="https://github.com/BoneMuffin">BoneMuffin</a> ❧
+  </p>
+</footer>
+</div>
+</body>
+<script src="todoStatuses.js"></script>
+<script src="main.js"></script>
+</html>
