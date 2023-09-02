@@ -1,1 +1,1 @@
-console.log('this message deployed from the main.js file');
+console.log("Webpack is working as intended. Pizza is neat.");
