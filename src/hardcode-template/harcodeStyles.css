@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css?family=Walter+Turncoat');
+
+:root {
+  --pen: #37373c;
+
+  --dark-grey: #37373c;
+  --light-grey: #e6e6e6;
+  --grey-dot: #4f4f4f;
+  --paper: #f7f7f7;
+
+  /* priority color system palette */
+  --blue-marker: #beedf3; /* nonessential */
+  --red-marker: #ff7d7d;  /* urgent */
+  --green-marker: #afff97;  /* essential */
+/* the due date will be marked with each color depending on how close the due date it is*/
+
+}
+
+*, ::after, 
+::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+} 
+ 
+#content {
+  display: flex;
+}
+
+#content, body, html {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+html {
+  position: relative;
+}
+
+body {
+  font-family: "Walter Turncoat", cursive;
+  font-size: 2.5em;
+  padding: 1em;
+  background-size: 1em 1em;
+  background-image: radial-gradient(circle, rgba(10, 10, 10, 0.315) 1px, rgba(0, 0, 0, 0) 2px);
+  background-position: 0.3em 0.62em;
+}
+
+/* HEADER / TOP */
+
+h1 {
+  display: block;
+  line-height: 1.001em;
+  color: #37373c;
+  margin-bottom: 1em;
+}
+
+header {
+  display: none;
+}
+
+main {
+  display: flex;
+  min-height: calc(100vh - 104px - 48px);
+}
+
+.btn-nav {
+  display: none;
+  width: 40px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+}
+
+.btn-nav svg {
+  margin-right: 0;
+  margin-bottom: 25px;
+}
+
+.title {
+  font-size: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+/* BODY */
+
+
+.main {
+  display: flex;
+  /* navbar support */
+  min-height: calc(100vh - 104px - 48px); /*  - header_height - footer_height */
+}
+
+.active {
+  color: var(--pen);
+}
+.active, .projects:hover {
+  background-color: var(--blue-marker);
+}
+
+.active-projects-div {
+  width: 300px;
+  min-width: 20vw;
+  padding: 25px 40px;
+  overflow-y: scroll;
+}
+
+.active-projects-div.active {
+  display: block;
+}
+
+.project {
+  font-size: 24px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.project:hover {
+  scale: 1.05;
+}
+
+.project-panel {
+  width: 75vw;
+  padding: 0px 40px; /* 50px 40px*/
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+#note-list {
+}
+
+.note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  line-height: 1em;
+  color: #37373c;
+  /* margin-left: 1em; */
+
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding: 2.5px;
+}
+
+.note .task-content {
+  margin-left: 1.25em;
+  display: flex;
+  outline: none;
+}
+
+/* NOTE STRUCTURE */
+
+.note todo {
+  display: inline-block;
+  position: relative;
+  transform: scale(1.3);
+  cursor: pointer;
+  user-select: none;
+  line-height: 1;
+}
+
+.note todo.started:before {
+  content: "|";
+  position: absolute;
+  transform: rotate(45deg);
+  top: 8%;
+  left: 30%;
+}
+
+.note todo.canceled:before {
+  content: "|";
+  position: absolute;
+  transform: rotate(45deg);
+  top: 8%;
+  left: 30%;
+}
+
+.note todo.canceled:after {
+  content: "|";
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 9%;
+  left: 30%;
+}
+
+.note todo.halfway:before {
+  content: "|";
+  position: absolute;
+  transform: rotate(45deg);
+  top: 8%;
+  left: 30%;
+}
+
+.note todo.halfway:after {
+  content: "";
+  position: absolute;
+  width: 0.5em;
+  height: 1em;
+  background: rgba(55, 55, 60, 0.95);
+  display: block;
+  border-radius: 0 1em 1em 0;
+  top: 18%;
+  left: 20%;
+  transform: scale(0.5) rotate(45deg);
+}
+
+.note todo.done:before {
+  content: "|";
+  position: absolute;
+  transform: rotate(45deg);
+  top: 8%;
+  left: 30%;
+}
+
+.note todo.done:after {
+  content: "";
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  background: rgba(55, 55, 60, 0.95);
+  display: block;
+  border-radius: 50%;
+  top: 8%;
+  left: -40%;
+  transform: scale(0.45);
+}
+
+.line {
+  height: 3px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color:var(--pen);
+}
+
+.project-header {
+  font-size: 1em;
+}
+
+.projects {
+  padding: 10px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.add-project-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 16px;
+  }
+
+.addp-text {
+  border: 2px solid var(--pen);
+  box-shadow: 10px 10px 0px 0px var(--pen);
+}
+
+.addp-text:hover,
+.addp-text:active {
+  scale: 1.05;
+}
+
+#add-project {
+    cursor: pointer;
+}
+
+.addp-text {
+    font-size: 25px;
+    margin-right: 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 0px 10px 5px 0px;
+}
+
+#plus {
+  margin-left: 12px;
+  margin-right: 8px;
+  font-size: 30px;
+}
+
+.project-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-settings-right, 
+.task-settings-left{
+  display: flex;
+}
+
+.deadline:hover {
+  scale: 1.05;
+  cursor: pointer;
+}
+
+.task-content {
+  margin-left: 12px;
+}
+
+.task-delete {
+  width: 40px;
+  margin-top: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.task-delete:hover {
+  transform: scale(1.2);
+}
+
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--dark-grey);
+  color: var(--paper);
+  font-size: 30px;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--paper);
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 650px) {
+  .btn-nav {
+    display: block;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .nav {
+    width: 100%;
+    display: none;
+  }
+
+  .project-panel {
+    width: 100%;
+  }
+
+  .right-task-panel {
+    justify-content: flex-end;
+    max-width: 33%;
+  }
+}
